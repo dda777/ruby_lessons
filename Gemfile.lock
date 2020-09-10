@@ -61,6 +61,7 @@ GEM
     ansi (1.5.0)
     autoprefixer-rails (9.8.6.3)
       execjs
+    bcrypt (3.1.16)
     bindex (0.8.1)
     bootsnap (1.4.8)
       msgpack (~> 1.0)
@@ -246,6 +247,7 @@ PLATFORMS
   x64-mingw32
 
 DEPENDENCIES
+  bcrypt (~> 3.1.7)
   bootsnap (>= 1.4.2)
   bootstrap-sass
   byebug
