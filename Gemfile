@@ -8,8 +8,7 @@ gem 'rails', '~> 6.0.3', '>= 6.0.3.2'
 gem 'mini_backtrace', '>= 0.1.3'
 
 gem 'bootstrap-sass'
-# Use Puma as the app server
-gem 'puma', '~> 4.1'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '>= 6'
 # Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
@@ -54,6 +53,7 @@ end
 group :production do
   gem 'pg',             '>= 0.17.1'
   gem 'rails_12factor', '>= 0.0.2'
+  gem 'puma', '~> 4.1'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
