@@ -6,7 +6,7 @@ ruby '2.7.1'
 gem 'rails', '~> 6.0.3', '>= 6.0.3.2'
 # Use sqlite3 as the database for Active Record
 gem 'mini_backtrace', '>= 0.1.3'
-gem 'minitest'
+
 gem 'bootstrap-sass'
 # Use Puma as the app server
 gem 'puma', '~> 4.1'
@@ -31,25 +31,23 @@ gem 'bootsnap', '>= 1.4.2', require: false
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'byebug', platforms: %i[mri mingw x64_mingw]
 end
 
 group :development do
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
-  gem 'web-console', '>= 3.3.0'
   gem 'guard'
   gem 'guard-minitest'
+  gem 'web-console', '>= 3.3.0'
 end
 
-
 group :test do
+  gem 'minitest', '>= 5.14.2'
+  gem 'minitest-reporters'
   gem 'rails-controller-testing'
-  gem 'minitest-reporters', group: :test
-  # Adds support for Capybara system testing and selenium driver
-  gem 'sqlite3', '~> 1.4'
   gem 'capybara', '>= 2.15'
   gem 'selenium-webdriver'
-  # Easy installation and use of web drivers to run system tests with browsers
+  gem 'sqlite3', '~> 1.4'
   gem 'webdrivers'
 end
 
@@ -59,4 +57,4 @@ group :production do
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
