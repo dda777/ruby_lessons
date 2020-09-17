@@ -19,7 +19,6 @@ class ActiveSupport::TestCase
   def log_in_as(user, options = {})
     password = options[:password] || 'Rhjyjc2910'
     remember_me = options[:remember_me] || '1'
-    puts "Не могу понять что за тест" + integration_test?.to_s
     if integration_test?
       post login_path, params: {
           session: {
