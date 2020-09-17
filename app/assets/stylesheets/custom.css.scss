@@ -9,6 +9,7 @@
 
 
 $light-gray: #777;
+$gray-lighter: #000;
 $white: #fff;
 $state-danger-text : red;
 
@@ -191,4 +192,15 @@ input {
 #session_remember_me {
   width: auto;
   margin-left: 0;
+}
+
+/* Список пользователей */
+.users {
+  list-style: none;
+  margin: 0;
+  li {
+    overflow: auto;
+    padding: 10px 0;
+    border-bottom: 1px solid $gray-lighter;
+  }
 }

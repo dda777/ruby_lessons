@@ -4,7 +4,18 @@ one:
   name: Дикий Денис
   email: denis.dikiy@gmail.com
   password_digest: <%= User.digest('Rhjyjc2910') %>
+  admin: true
 
 two:
-  name: MyString
-  email: MyString
+  name: Дикая Саша
+  email: a.carevskaya@tavriav.com.ua
+  password_digest: <%= User.digest('Rhjyjc2910') %>
+
+<% 35.times do |n| %>
+user_<%= n %>:
+  name: <%= "User #{n}" %>
+  email: <%= "User-#{n}@example.com" %>
+  password_digest: <%= User.digest('password') %>
+<% end %>
+
+
