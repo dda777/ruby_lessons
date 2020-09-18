@@ -5,17 +5,23 @@ one:
   email: denis.dikiy@gmail.com
   password_digest: <%= User.digest('Rhjyjc2910') %>
   admin: true
+  activated: true
+  activated_at: <%= Time.zone.now %>
 
 two:
   name: Дикая Саша
   email: a.carevskaya@tavriav.com.ua
   password_digest: <%= User.digest('Rhjyjc2910') %>
+  activated: true
+  activated_at: <%= Time.zone.now %>
 
 <% 35.times do |n| %>
 user_<%= n %>:
   name: <%= "User #{n}" %>
   email: <%= "User-#{n}@example.com" %>
   password_digest: <%= User.digest('password') %>
+  activated: true
+  activated_at: <%= Time.zone.now %>
 <% end %>
 
 
