@@ -32,9 +32,17 @@ Rails.application.configure do
   config.active_storage.service = :local
 
   # Don't care if the mailer can't send.
-  config.action_mailer.raise_delivery_errors = false
   host = 'localhost:3000'
-  config.action_mailer.default_url_options = { host: host, protocol: 'http' }
+  config.action_mailer.default_url_options = { :host => host }
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+      address:              'smtp.gmail.com',
+      port:                 587,
+      domain:               'localhost:3000',
+      user_name:            'denis.dikiy@gmail.com',
+      password:             'zrcplhhgskjqefbe',
+      authentication:       'plain',
+      enable_starttls_auto: true }
 
 
   # Print deprecation notices to the Rails logger.
