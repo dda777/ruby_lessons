@@ -61,7 +61,6 @@
     <orderEntry type="library" scope="PROVIDED" name="execjs (v2.7.0, ruby-2.7.1-p83) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="faker (v2.14.0, ruby-2.7.1-p83) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="ffi (v1.13.1, ruby-2.7.1-p83) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="figaro (v1.2.0, ruby-2.7.1-p83) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="formatador (v0.2.5, ruby-2.7.1-p83) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="globalid (v0.4.2, ruby-2.7.1-p83) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="guard (v2.16.2, ruby-2.7.1-p83) [gem]" level="application" />
