@@ -4,6 +4,7 @@ ruby '2.7.1'
 
 
 gem 'rails', '~> 6.0.3', '>= 6.0.3.2'
+gem 'figaro'
 gem 'image_processing'
 gem 'mini_magick'
 gem 'active_storage_validations'
