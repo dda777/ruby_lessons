@@ -1,8 +1,10 @@
 class StaticPagesController < ApplicationController
   def home
-    @user = current_user
-    @project = current_user.projects.build if logged_in?
-    @projects = current_user.projects.all
+    if logged_in?
+      @project = current_user.projects.build
+      @projects = Project.includes(:task).where(user_id: current_user.id)
+
+    end
   end
 
   def help

@@ -1,6 +1,25 @@
-<% if @user.projects.any? %>
-  <ol class="project">
-    <%= render @projects %>
-  </ol>
-  <%= will_paginate @projects %>
+<% if @projects.any? %>
+  <table>
+    <thead>
+    <tr>
+      <th>Name</th>
+      <th colspan="2"></th>
+    </tr>
+    </thead>
+    <tbody>
+    <% @projects.each do |project| %>
+      <tr>
+        <td><%= project.title %></td>
+        <td><%= link_to 'Edit', edit_project_path(project) %></td>
+        <td><%= link_to "Destroy", project, method: :delete, data: {confirm: 'You sure?'} %></td>
+      </tr>
+      <tr>
+        <% project.task.each do |task| %>
+          <td><%= task.name %></td>
+          <td><%= task.status %></td>
+        <% end %>
+      </tr>
+    <% end %>
+    </tbody>
+  </table>
 <% end %>

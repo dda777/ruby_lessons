@@ -1,6 +1,0 @@
-<li id="micropost-<%= project.id %>">
-  <span class="title"><%= project.title %></span>
-  <%  if current_user.admin? || current_user?(@user) %>
-    | <%= link_to "delete", project, method: :delete, data: {confirm: 'You sure?'} %>
-  <% end %>
-</li>
