@@ -12,6 +12,11 @@ Rails.application.routes.draw do
   resources :users
   resources :account_activations, only: [:edit]
   resources :password_resets, only: [:new, :create, :edit, :update]
-  resources :projects
+  resources :projects, only: [ :index, :create, :update, :destroy ]
+  resources :tasks, only: [ :create, :update ] do
+    put :destroy,    on: :collection
+    put :complete,   on: :member
+    put :prioritize, on: :member
+  end
 
 end

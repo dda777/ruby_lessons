@@ -11,16 +11,21 @@
 
   <%= render 'layouts/shim' %>
 </head>
-<body>
-<%= render 'layouts/header' %>
-<div class="container">
-  <% flash.each do |message_type, message| %>
-    <%= content_tag(:div, message, class: "alert alert-#{message_type}") %>
-  <% end %>
-  <%= yield %>
-  <%= render 'layouts/footer' %>
-  <%= debug(params) if Rails.env.development? %>
+<body id='<%= controller_path.dasherize.gsub('/', '-') %>' data-action='<%= action_name.dasherize %>'>
+<div id='wrapper'>
+  <div id='main-content' class='container'>
+    <%= yield %>
+    <div id='push'></div>
+  </div>
 </div>
+<!--<div class="container">-->
+  <%# flash.each do |message_type, message| %>
+    <%#= content_tag(:div, message, class: "alert alert-#{message_type}") %>
+  <%# end %>
+  <%#= yield %>
+  <%#= render 'layouts/footer' %>
+  <%#= debug(params) if Rails.env.development? %>
+<!--</div>-->
 
 </body>
 </html>

@@ -1,25 +1,20 @@
 <% if @projects.any? %>
-  <table>
-    <thead>
-    <tr>
-      <th>Name</th>
-      <th colspan="2"></th>
-    </tr>
-    </thead>
-    <tbody>
-    <% @projects.each do |project| %>
-      <tr>
-        <td><%= project.title %></td>
-        <td><%= link_to 'Edit', edit_project_path(project) %></td>
-        <td><%= link_to "Destroy", project, method: :delete, data: {confirm: 'You sure?'} %></td>
-      </tr>
-      <tr>
-        <% project.task.each do |task| %>
-          <td><%= task.name %></td>
-          <td><%= task.status %></td>
-        <% end %>
-      </tr>
+  <div id='projects'>
+    <%= render @projects %>
+  </div>
+
+  <div class='center'>
+    <%= link_to nil, id: 'new-project-toggler', class: 'btn btn-danger' do %>
+      <%= icon_label 'icon-plus', t('.new') %>
     <% end %>
-    </tbody>
-  </table>
+  </div>
+
+
+  <div id='new-project' class='well span6'>
+    <%= simple_form_for @project, remote: true, html: { id: 'new-project', class: 'form-horizontal' } do |form| %>
+      <%= form.input :title, required: true %>
+
+      <%= form.submit t('common.submit'), class: 'btn btn-success', disabled: true, data: { disable_with: t('common.please_wait') } %>
+    <% end %>
+  </div>
 <% end %>

@@ -1,9 +1,8 @@
 class StaticPagesController < ApplicationController
   def home
     if logged_in?
-      @project = current_user.projects.build
-      @projects = Project.includes(:task).where(user_id: current_user.id)
-
+      @project = Project.new
+      @projects = current_user.projects.page(params[:page])
     end
   end
 

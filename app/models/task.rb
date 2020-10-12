@@ -1,5 +1,7 @@
 class Task < ApplicationRecord
   belongs_to :project
-  default_scope -> { order(created_at: :desc) }
+  acts_as_list scope: :project
+  default_scope -> { order(prioritize: :desc) }
+  scope :recent_first, -> { order(created_at: :desc) }
   validates :name, presence: true
 end
