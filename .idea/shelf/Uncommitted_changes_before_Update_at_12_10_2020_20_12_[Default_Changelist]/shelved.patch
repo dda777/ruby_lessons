@@ -1,0 +1,157 @@
+Index: app/views/shared/_projects_list.html.erb
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><% if @user.projects.any? %>\r\n  <ol class=\"project\">\r\n    <%= render @projects %>\r\n  </ol>\r\n  <%= will_paginate @projects %>\r\n<% end %>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/views/shared/_projects_list.html.erb	(revision d757baadf1b552bd5171e532c436ceb41b47558c)
++++ app/views/shared/_projects_list.html.erb	(date 1602083186873)
+@@ -2,5 +2,4 @@
+   <ol class="project">
+     <%= render @projects %>
+   </ol>
+-  <%= will_paginate @projects %>
+ <% end %>
+\ No newline at end of file
+Index: app/controllers/projects_controller.rb
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>class ProjectsController < ApplicationController\r\n  before_action :logged_in_user, only: [:create, :destroy, :update]\r\n\r\n  def create\r\n    @project = current_user.projects.build(projects_params)\r\n    if @project.save\r\n      flash[:success] = 'Project created!'\r\n      redirect_to root_url\r\n    else\r\n      render 'static_pages/home'\r\n    end\r\n  end\r\n\r\n  def update\r\n\r\n  end\r\n\r\n  def destroy\r\n    Project.find(params[:id]).destroy\r\n    flash[:success] = 'Project deleted'\r\n    redirect_to root_url\r\n  end\r\n\r\n  private\r\n  def projects_params\r\n    params.require(:project).permit(:title)\r\n  end\r\nend\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/controllers/projects_controller.rb	(revision d757baadf1b552bd5171e532c436ceb41b47558c)
++++ app/controllers/projects_controller.rb	(date 1602078625663)
+@@ -2,7 +2,9 @@
+   before_action :logged_in_user, only: [:create, :destroy, :update]
+ 
+   def create
+-    @project = current_user.projects.build(projects_params)
++    @user = current_user
++    @projects = @user.projects.paginate(page: params[:page])
++    @project = @user.projects.build(projects_params)
+     if @project.save
+       flash[:success] = 'Project created!'
+       redirect_to root_url
+@@ -12,6 +14,13 @@
+   end
+ 
+   def update
++    @project = Project.find(params[:id])
++    if @project.update(projects_params)
++      flash[:success] = 'Project updated'
++      redirect_to root_url
++    else
++      render 'edit'
++    end
+ 
+   end
+ 
+Index: app/controllers/static_pages_controller.rb
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>class StaticPagesController < ApplicationController\r\n  def home\r\n    @user = current_user\r\n    @project = current_user.projects.build if logged_in?\r\n    @projects = current_user.projects.all\r\n  end\r\n\r\n  def help\r\n  end\r\n\r\n  def about\r\n  end\r\n\r\n  def contact\r\n  end\r\nend\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/controllers/static_pages_controller.rb	(revision d757baadf1b552bd5171e532c436ceb41b47558c)
++++ app/controllers/static_pages_controller.rb	(date 1602083176148)
+@@ -1,8 +1,10 @@
+ class StaticPagesController < ApplicationController
+   def home
+-    @user = current_user
+-    @project = current_user.projects.build if logged_in?
+-    @projects = current_user.projects.all
++    if logged_in?
++      @user = current_user
++      @project = @user.projects.build
++      @projects = @user.projects.all
++    end
+   end
+ 
+   def help
+Index: app/views/projects/_project.html.erb
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><li id=\"micropost-<%= project.id %>\">\r\n  <span class=\"title\"><%= project.title %></span>\r\n  <%  if current_user.admin? || current_user?(@user) %>\r\n    | <%= link_to \"delete\", project, method: :delete, data: {confirm: 'You sure?'} %>\r\n  <% end %>\r\n</li>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/views/projects/_project.html.erb	(revision d757baadf1b552bd5171e532c436ceb41b47558c)
++++ app/views/projects/_project.html.erb	(date 1602083353463)
+@@ -1,6 +1,18 @@
+-<li id="micropost-<%= project.id %>">
+-  <span class="title"><%= project.title %></span>
+-  <%  if current_user.admin? || current_user?(@user) %>
+-    | <%= link_to "delete", project, method: :delete, data: {confirm: 'You sure?'} %>
++<table>
++  <thead>
++  <tr>
++    <th>Name</th>
++    <th colspan="2"></th>
++  </tr>
++  </thead>
++  <tbody>
++  <% @projects.each do |project| %>
++    <tr>
++      <td><%= project.title %></td>
++      <td><%= link_to 'Edit', edit_project_path(project) %></td>
++      <td><%= link_to "Destroy", project, method: :delete, data: {confirm: 'You sure?'} %></td>
++    </tr>
+   <% end %>
+-</li>
+\ No newline at end of file
++  </tbody>
++
++</table>
+\ No newline at end of file
+Index: app/views/projects/edit.html.erb
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/views/projects/edit.html.erb	(date 1602083658778)
++++ app/views/projects/edit.html.erb	(date 1602083658778)
+@@ -0,0 +1,7 @@
++<% provide(:title, "Edit project") %>
++<h1>Update project title</h1>
++<div class="row">
++  <div class="col-md-6 col-md-offset-3">
++    <%= render 'projects/form', project: @project %>
++  </div>
++</div>
+\ No newline at end of file
+Index: app/views/projects/_form.hrml.erb
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/views/projects/_form.hrml.erb	(date 1602083523722)
++++ app/views/projects/_form.hrml.erb	(date 1602083523722)
+@@ -0,0 +1,22 @@
++<%= form_with(model: user, local: true) do |form| %>
++  <% if user.errors.any? %>
++    <div id="error_explanation">
++      <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
++
++      <ul>
++        <% user.errors.full_messages.each do |message| %>
++          <li><%= message %></li>
++        <% end %>
++      </ul>
++    </div>
++  <% end %>
++
++  <div class="field">
++    <%= form.label :title %>
++    <%= form.text_field :title %>
++  </div>
++
++  <div class="actions">
++    <%= form.submit %>
++  </div>
++<% end %>
+\ No newline at end of file
+diff --git app/views/projects/new.html.erb app/views/projects/new.html.erb
+new file mode 100644

@@ -18,11 +18,15 @@ body#static-pages {
     form.form-inline {
       display: inline-block;
       margin: 5px 0 5px 55px;
-    }
 
-    span.help-block {
-      position: absolute;
+      div.task_name {
+        input{
+          width: 450px;
+        }
+        display: inline-block;
+      }
     }
+    background-color: #eee;
 
   }
 

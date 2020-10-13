@@ -20,12 +20,12 @@ body#static-pages {
   }
 
   div.project {
-    @extend .span7 !optional;
-
+    width: 670px;
     float: none;
     margin: 25px auto;
 
     div.project-header {
+      background-color: #3a87ad;
       padding: 15px 10px;
       border: 1px solid $infoBorder;
 
