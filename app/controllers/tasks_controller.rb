@@ -5,7 +5,7 @@ class TasksController < ApplicationController
   def create
     @task = @project.task.create(task_params)
 
-    if @task.persisted?
+    if @task.save
       render json: { entry: render_to_string(partial: 'task', locals: { task: @task }), message: 'Задача создана'},
              status: 202
 

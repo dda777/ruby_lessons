@@ -8,12 +8,4 @@
       </h1>
     </section>
   </aside>
-  <div class="col-md-8">
-    <% if @user.projects.any? %>
-      <ol class="project">
-        <%= render @projects %>
-      </ol>
-      <%= will_paginate @projects %>
-    <% end %>
-  </div>
 </div>

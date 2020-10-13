@@ -1,7 +1,7 @@
 // Place all the styles related to the Tasks controller here.
 // They will automatically be included in application.css.scss.
 // You can use Sass (SCSS) here: https://sass-lang.com/
-@import "variables";
+
 body#static-pages {
   div.control-group.task_project_id { display: none };
   div.new-task-container {
@@ -12,7 +12,7 @@ body#static-pages {
       margin: 6px 0 0 16px;
 
       font-size: 30px;
-      color: $successText;
+      color: #468847;
     };
 
     form.form-inline {
@@ -40,7 +40,7 @@ body#static-pages {
   }
 
   li.task-item.completed {
-    background: $grayLighter;
+    background: #eee;
 
     span.task-name {
       text-decoration: line-through;
@@ -100,6 +100,7 @@ body#static-pages {
   list-style: none;
   border-top: 1px solid #e6ebed;
   margin-left: 0;
+  padding: 10px;
 }
 
 .todo-list:before {
@@ -120,6 +121,7 @@ body#static-pages {
   font-size: 12px;
   color: #8b8f97;
   border-bottom: 1px solid #e6ebed;
+
 }
 
 input[type=checkbox] {
@@ -135,9 +137,9 @@ input[type=checkbox]:checked + .toggle:after{
   height: 35px;
   width: 35px;
   position: absolute;
-  top: 0px;
-  bottom: 0px;
-  left: 0px;
+  top: 0;
+  bottom: 0;
+  left: 0;
   text-indent: 100%;
   overflow: hidden;
   cursor: pointer;

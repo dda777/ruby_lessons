@@ -13,10 +13,6 @@ module ApplicationHelper
     "<i class='#{ classes }'></i> #{ text }".html_safe
   end
 
-  def page_header(text = nil, subtext = nil)
-    "<div class='page-header'> <h3> #{ text ? text : t('.header') } #{ subtext ? ('<small>' + subtext + '</small>') : ''} </h3> </div>".html_safe
-  end
-
   def no_results(text = nil)
     "<div class='no-results well'> <h3> #{ text ? text : t('.no_results') } </h3> </div>".html_safe
   end

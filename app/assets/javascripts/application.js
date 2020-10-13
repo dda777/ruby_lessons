@@ -2,6 +2,10 @@
 //= require jquery_ujs
 //= require bootstrap
 //= require editable/bootstrap-editable
+//= require editable/inputs-ext/wysihtml5
+//= require editable/inputs-ext/bootstrap-wysihtml5
+//= require editable/inputs-ext/wysihtml5-editable
+//= require editable/rails
 //= require api
 //= require jquery-ui
 //= require projects
@@ -9,8 +13,6 @@
 //= require_self
 
 
-
-//
 
 jQuery.fn.reverse = [].reverse;
 

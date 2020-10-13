@@ -4,30 +4,21 @@
   <title><%= full_title(yield(:title)) %></title>
   <%= csrf_meta_tags %>
   <%= csp_meta_tag %>
-
   <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 
 
-  <%= render 'layouts/shim' %>
 </head>
 <body id='<%= controller_path.dasherize.gsub('/', '-') %>' data-action='<%= action_name.dasherize %>'>
+<%= render 'layouts/header' %>
 <div id='wrapper'>
-  <%= render 'layouts/header' %>
   <%= render 'layouts/notifications' %>
   <div id='main-content' class='container'>
     <%= yield %>
     <div id='push'></div>
   </div>
+  <%= render 'layouts/footer' %>
 </div>
-<!--<div class="container">-->
-  <%# flash.each do |message_type, message| %>
-    <%#= content_tag(:div, message, class: "alert alert-#{message_type}") %>
-  <%# end %>
-  <%#= yield %>
-  <%#= render 'layouts/footer' %>
-  <%#= debug(params) if Rails.env.development? %>
-<!--</div>-->
 
-<%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 </body>
 </html>
