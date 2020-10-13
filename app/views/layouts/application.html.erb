@@ -12,7 +12,9 @@
 <body id='<%= controller_path.dasherize.gsub('/', '-') %>' data-action='<%= action_name.dasherize %>'>
 <%= render 'layouts/header' %>
 <div id='wrapper'>
-  <%= render 'layouts/notifications' %>
+  <% flash.each do |message_type, message| %>
+    <div class="alert alert-<%= message_type %>"><%= message %></div>
+  <% end %>
   <div id='main-content' class='container'>
     <%= yield %>
     <div id='push'></div>
