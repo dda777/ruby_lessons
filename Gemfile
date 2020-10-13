@@ -34,7 +34,6 @@ group :assets do
   gem 'uglifier'
 end
 group :development, :test do
-  gem 'sqlite3', '~> 1.4'
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
 end
 

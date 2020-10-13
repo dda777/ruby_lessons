@@ -20,16 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="edaa2b66-13c6-4e70-ac9d-5dc01c2e161d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/sessions_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/sessions_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/task.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/task.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/layouts/_notifications.html.erb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/shared/_project_form.html.erb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/shared/_projects_list.html.erb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/migrate/20201008211718_create_tasks.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20201008211718_create_tasks.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/schema.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/environments/production.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/environments/production.rb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -174,7 +167,7 @@
       <workItem from="1602522890607" duration="8987000" />
       <workItem from="1602532575141" duration="5270000" />
       <workItem from="1602538496143" duration="7546000" />
-      <workItem from="1602575132965" duration="18542000" />
+      <workItem from="1602575132965" duration="19376000" />
     </task>
     <servers />
   </component>
