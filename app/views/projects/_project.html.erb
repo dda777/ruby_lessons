@@ -23,14 +23,9 @@
     <div class='new-task-container'>
       <%= icon_label 'icon-plus new-task-label' %>
       <%= form_with model: Task.new, html: { id: "new-project-task-#{project.id}", class: 'new-task form-inline' } do |form| %>
-
-
         <%= form.text_field :name, class: 'col'%>
-
         <%= form.hidden_field :project_id, value: project.id %>
-
         <%= form.submit t('common.submit'), class: 'btn btn-success', disabled: true, data: { disable_with: t('common.please_wait') } %>
-
       <% end %>
     </div>
 
