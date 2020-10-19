@@ -103,6 +103,7 @@
     <orderEntry type="library" scope="PROVIDED" name="oauth2 (v1.4.4, ruby-2.7.1-p83) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="omniauth (v1.9.1, ruby-2.7.1-p83) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="omniauth-facebook (v7.0.0, ruby-2.7.1-p83) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="omniauth-google-oauth2 (v0.8.0, ruby-2.7.1-p83) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="omniauth-oauth2 (v1.7.0, ruby-2.7.1-p83) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="pg (v1.2.3, ruby-2.7.1-p83) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="pry (v0.13.1, ruby-2.7.1-p83) [gem]" level="application" />

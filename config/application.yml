@@ -2,3 +2,6 @@ GMAIL_USERNAME: 'denis.dikiy@gmail.com'
 GMAIL_PASSWORD: 'zrcplhhgskjqefbe'
 FACEBOOK_APP_ID: '2749460155376289'
 FACEBOOK_SECRET: '5b96afe3508ec0fea66dc56dc9f6ab06'
+GOOGLE_CLIENT_ID: '950383603544-onlocdtk9mfasg3b5drq40alo06avtnl.apps.googleusercontent.com'
+GOOGLE_CLIENT_SECRET: '6ErjfuwUbHthm_0MaEsL8uZq'
+

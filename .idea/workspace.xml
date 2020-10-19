@@ -21,8 +21,14 @@
   <component name="ChangeListManager">
     <list default="true" id="edaa2b66-13c6-4e70-ac9d-5dc01c2e161d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/users/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/users/_form.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/users/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/users/new.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/custom.css.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/custom.css.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/services_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/services_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/users_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/users_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/sessions/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/sessions/new.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/users/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/users/show.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/initializers/omniauth.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/initializers/omniauth.rb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,13 +77,13 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\WWW\Projects\rubu_lessons\app\assets\stylesheets" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Projects\rubu_lessons\app\views\layouts" />
       <recent name="D:\WWW\Projects\rubu_lessons\app\assets\stylesheets" />
       <recent name="D:\WWW\Projects\rubu_lessons\app\assets\javascripts" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\WWW\Projects\rubu_lessons\app\assets\stylesheets" />
     </key>
   </component>
   <component name="RunManager" selected="Test::Unit/Shoulda/Minitest.test_should_get_home">
@@ -217,7 +223,7 @@
       <workItem from="1602831212042" duration="34057000" />
       <workItem from="1602953733408" duration="4000" />
       <workItem from="1602954945702" duration="8062000" />
-      <workItem from="1603055713474" duration="4218000" />
+      <workItem from="1603055713474" duration="9064000" />
     </task>
     <servers />
   </component>

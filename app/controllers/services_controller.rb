@@ -7,14 +7,10 @@ class ServicesController < ApplicationController
     omniauth = request.env['omniauth.auth']
 
     if omniauth && params[:service]
-      if service_route == 'facebook'
-        email = omniauth['extra']['raw_info']['email'] || ''
-        name = omniauth['extra']['raw_info']['name'] || ''
-        uid = omniauth['extra']['raw_info']['id'] || ''
-        provider = omniauth['provider'] || ''
-      else
-        return
-      end
+      email = omniauth['extra']['raw_info']['email'] || ''
+      name = omniauth['extra']['raw_info']['name'] || ''
+      uid = omniauth['extra']['raw_info']['id'] || ''
+      provider = omniauth['provider'] || ''
 
       if (uid != '') && (provider != '')
         if !user_signed_in?
@@ -69,6 +65,10 @@ class ServicesController < ApplicationController
     end
   end
 
-  def destroy; end
+  def destroy
+    Service.find(params[:id]).destroy
+    flash[:success] = 'User deleted'
+    redirect_to users_url
+  end
 
 end

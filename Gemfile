@@ -17,8 +17,11 @@ gem 'bootstrap-glyphicons'
 gem 'puma', '~> 4.1'
 gem 'font-awesome-sass-rails'
 gem 'sass-rails', '>= 6'
+
 gem 'omniauth'
 gem 'omniauth-facebook'
+gem 'omniauth-google-oauth2'
+
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
 gem 'webpacker', '~> 4.0'
