@@ -6,6 +6,10 @@
       <%= render 'form', f:f %>
       <%= f.submit "Create my account", class: "btn btn-primary" %>
     <% end %>
-    <p><%= link_to "Sign up with Facebook", '/auth/facebook/', class: 'btn btn-primary', role: "button"%></p>
+
+    <div class="oauth">
+      <%= link_to "Sign up with Facebook", '/auth/facebook/', class: 'btn btn-primary', role: "button"%>
+      <%= link_to "Sign up with Google", '/auth/google_oauth2/', class: 'btn btn-danger', role: "button"%>
+    </div>
   </div>
 </div>

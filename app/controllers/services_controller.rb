@@ -1,5 +1,4 @@
 class ServicesController < ApplicationController
-  def index; end
 
   def create
     service_route = params[:service] || 'no service (invalid callback)'
@@ -7,11 +6,17 @@ class ServicesController < ApplicationController
     omniauth = request.env['omniauth.auth']
 
     if omniauth && params[:service]
-      email = omniauth['extra']['raw_info']['email'] || ''
-      name = omniauth['extra']['raw_info']['name'] || ''
-      uid = omniauth['extra']['raw_info']['id'] || ''
-      provider = omniauth['provider'] || ''
-
+      if service_route == 'facebook'
+        email = omniauth['extra']['raw_info']['email'] || ''
+        name = omniauth['extra']['raw_info']['name'] || ''
+        uid = omniauth['extra']['raw_info']['id'] || ''
+        provider = 'Facebook' || ''
+      elsif service_route == 'google_oauth2'
+        email = omniauth['info']['email'] || ''
+        name = omniauth['info']['name'] || ''
+        uid = omniauth['uid'] || ''
+        provider = 'Google' || ''
+      end
       if (uid != '') && (provider != '')
         if !user_signed_in?
           auth = Service.find_by_provider_and_uid(provider, uid)
