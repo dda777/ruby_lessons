@@ -15,6 +15,7 @@ class UsersController < ApplicationController
   # GET /users/1.json
   def show
     set_user
+    @services = current_user.services.all
     @projects = @user.projects.paginate(page: params[:page])
     redirect_to root_url unless @user.activated?
   end

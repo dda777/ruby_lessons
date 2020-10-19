@@ -2,18 +2,25 @@
 <div class="row">
   <aside class="col-md-4">
     <section class="user_info">
-      <h1>
-        <%= gravatar_for @user %>
-        <%= @user.name %>
-      </h1>
+      <%= gravatar_for @user %>
+      <h1><%= @user.name %></h1>
     </section>
   </aside>
-  <div class="col-md-8">
-    <% if @user.projects.any? %>
-      <ol class="project">
-        <%= render @projects %>
-      </ol>
-      <%= will_paginate @projects %>
-    <% end %>
-  </div>
 </div>
+<%  if current_user?(@user) %>
+<div class="row">
+  <aside class="col-md-4">
+    <section class="services">
+      <h1>Services OAuth:</h1>
+      <ul class="list-group">
+        <% @services.each do |service|%>
+          <li class="list-group-item">
+            <%= link_to "delete?", service, method: :delete, data: {confirm: 'Are You sure?'}, class: 'tag pull-right' %>
+            <h1><%= service.provider %></h1>
+          </li>
+        <% end %>
+      </ul>
+    </section>
+  </aside>
+</div>
+<% end %>

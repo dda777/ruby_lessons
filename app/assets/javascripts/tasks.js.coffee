@@ -20,7 +20,7 @@ $.api.tasks =
                 event.preventDefault()
 
                 taskId = @id.replace('edit-task-name-', '')
-                $("span#task-#{taskId}").editable('toggle')
+                $("span#task-#{taskId}").editable('toggle', { url: '/tasks'})
 
             completeTask: ->
                 task = $(this).parents('li.task-item')
@@ -29,7 +29,7 @@ $.api.tasks =
                 task.toggleClass('completed').find('a.complete-task i').toggleClass('icon-thumbs-up icon-thumbs-down')
 
 
-        # Bindings
+
 
         container.on 'keyup', liveElements.taskNameInput, $.api.utils.toggleSubmit
 
@@ -64,7 +64,6 @@ $.api.tasks =
         # Edit
         container.on 'click', liveElements.editTask, callbacks.editTask
 
-        # toggle() caused bugs in some cases
         container.on 'mouseover', 'li.task-item', ->
             $(this).find('div.task-options').show()
         container.on 'mouseout', 'li.task-item', ->

@@ -3,7 +3,7 @@
 
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
-    <%= form_with(url: login_path, scope: :session, local: true) do |f| %>
+    <%= form_with(url: login_path, scope: :session, local: true, class: 'login-form') do |f| %>
       <%= f.label :email %>
       <%= f.email_field :email, class: 'form-control' %>
 
@@ -19,6 +19,10 @@
       <%= f.submit "Log in", class: "btn btn-primary" %>
     <% end %>
 
+    <div class="oauth">
+      <%= link_to "Log in with Facebook", '/auth/facebook/', class: 'btn btn-primary', role: "button" %>
+      <%= link_to "Log in with Google", '/auth/google_oauth2/', class: 'btn btn-danger', role: "button"%>
+    </div>
     <p>New user? <%= link_to "Sign up now!", signup_path %></p>
   </div>
 </div>

@@ -19,7 +19,6 @@ class ProjectsController < ApplicationController
     else
       render text: @project.errors.full_messages.join("<br />")
     end
-
   end
 
   def destroy

@@ -5,5 +5,4 @@
 
 $.api.welcome =
     init: ->
-
         console.log 'welcome'

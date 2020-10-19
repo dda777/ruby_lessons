@@ -1,18 +1,16 @@
-@import "variables";
-
 .hidden { display: none; }
 .invisible { visibility: hidden; }
 .inline { display: inline; }
 .absolute { position: absolute; }
-.error-text { color: $errorText; }
-.success-text { color: $successText; }
-.info-text { color: $infoText; }
+.error-text { color: #b94a48; }
+.success-text { color: #468847; }
+.info-text { color: #3a87ad; }
 .center { text-align: center };
 
 
 a.important {
   &:hover {
-    color: $red;
+    color: #9d261d;
     text-decoration: none;
   }
 }

@@ -1,8 +1,8 @@
 class StaticPagesController < ApplicationController
   def home
     if logged_in?
-      @project = Project.new
       @projects = current_user.projects.page(params[:page])
+      @project = Project.new
     end
   end
 
@@ -13,5 +13,8 @@ class StaticPagesController < ApplicationController
   end
 
   def contact
+  end
+
+  def privacy
   end
 end

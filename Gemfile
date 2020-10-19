@@ -13,9 +13,14 @@ gem 'faker'
 gem 'will_paginate'
 gem 'bootstrap-will_paginate'
 gem 'bootstrap-sass'
+gem 'bootstrap-glyphicons'
 gem 'puma', '~> 4.1'
 gem 'font-awesome-sass-rails'
 gem 'sass-rails', '>= 6'
+
+gem 'omniauth'
+gem 'omniauth-facebook'
+gem 'omniauth-google-oauth2'
 
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
@@ -33,11 +38,11 @@ group :assets do
   gem 'uglifier'
 end
 group :development, :test do
-  gem 'sqlite3', '~> 1.4'
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
 end
 
 group :development do
+  gem 'sqlite3'
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
   gem 'listen'
   gem 'spring'

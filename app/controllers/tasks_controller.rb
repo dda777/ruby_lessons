@@ -3,30 +3,31 @@ class TasksController < ApplicationController
   before_action :find_project!, only: [:create]
 
   def create
-    @task = @project.tasks.create(task_params)
+    @task = @project.task.create(task_params)
 
-    if @task.persisted?
-      render json: { entry: render_to_string(partial: 'task', locals: { task: @task }) },
+    if @task.save
+      render json: { entry: render_to_string(partial: 'task', locals: { task: @task }), message: 'Задача создана'},
              status: 202
+
     else
-      render json: { errors: @task.errors }, status: 422
+      render json: {errors: @task.errors}, status: 422
     end
   end
 
   def destroy
-    current_user.tasks.where(id: params[:task][:task_ids]).destroy_all
+    Task.where(id: params[:task][:task_ids]).destroy_all
     render nothing: true, status: 200
   end
 
   def complete
-    @task.update(completed: !@task.status)
+    @task.update(completed: !@task.completed)
 
     render nothing: true, status: 200
   end
 
   def update
     if @task.update(task_params)
-      render json: @task, status: 202
+      render json: @task
     else
       render text: @task.errors.full_messages.join("<br />")
     end
@@ -41,11 +42,11 @@ class TasksController < ApplicationController
   private
 
   def task_params
-    params.require(:task).permit(:name, :prioritize)
+    params.require(:task).permit(:name, :position)
   end
 
   def find_task!
-    @task = current_user.tasks.find(params[:id])
+    @task = Task.find(params[:id])
   end
 
   def find_project!
