@@ -116,8 +116,12 @@ div.language{
   li{
     padding: 15px 0;
     a{
+      text-decoration: none;
       color: #8b8f97;
       padding: 15px 5px;
+    }
+    a:hover {
+      color: #ddd;
     }
   }
   li.divider{

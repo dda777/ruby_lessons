@@ -20,6 +20,8 @@ class ApplicationController < ActionController::Base
     { locale: I18n.locale }
   end
 
+
+
   # def browser_locale(request)
   #   locales = request.env['HTTP_ACCEPT_LANGUAGE'] || ""
   #   locales.scan(/[a-z]{2}(?=;)/).find do |locale|

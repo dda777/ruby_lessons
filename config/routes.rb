@@ -20,7 +20,7 @@ Rails.application.routes.draw do
       put :complete, on: :member
       put :prioritize, on: :member
     end
-    get '/auth/:service/callback', to: 'services#create'
-    resources :services, only: %i[index create destroy]
   end
+  get '/auth/:service/callback', to: 'services#create'
+  resources :services, only: %i[index create destroy]
 end
