@@ -23,22 +23,18 @@
           <li><%= link_to t('menu.log_in'), login_path %></li>
         <% end %>
         <div class="language">
-          <li><%= link_to "Ru", { :locale=>'ru' }, class: 'nav-link disabled' %></li>
-          <li class="divider">|</li>
-          <li><%= link_to "En", { :locale=>'en' } %></li>
+          <% if I18n.locale == I18n.default_locale %>
+            <li><%= link_to "Ru", {:locale => 'ru'}, class: 'nav-link disabled' %></li>
+            <li class="divider">|</li>
+            <li><%= link_to "En", {:locale => 'en'} %></li>
+          <% else %>
+            <li><%= link_to "Ru", {:locale => 'ru'} %></li>
+            <li class="divider">|</li>
+            <li><%= link_to "En", {:locale => 'en'}, class: 'nav-link disabled' %></li>
+          <% end %>
         </div>
-
       </ul>
-      <ul class="nav navbar-nav navbar-right">
 
-      </ul>
-      <%# if I18n.locale == I18n.default_locale %>
-<!--        <span class="navbar-text"></span>-->
-<!--        <span class="navbar-text"></span>-->
-      <%# else %>
-        <%#= link_to "Ru", { :locale=>'ru' } %>
-        <%#= link_to "En", { :locale=>'en' }, class: 'nav-link disabled' %>
-      <%#end%>
     </nav>
 
 
