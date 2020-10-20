@@ -11,14 +11,9 @@
 <div class="row">
   <aside class="col-md-4">
     <section class="services">
-      <h1>Services OAuth:</h1>
+      <h1><%= t('users.show.service.title') %></h1>
       <ul class="list-group">
-        <% @services.each do |service|%>
-          <li class="list-group-item">
-            <%= link_to "delete?", service, method: :delete, data: {confirm: 'Are You sure?'}, class: 'tag pull-right' %>
-            <h1><%= service.provider %></h1>
-          </li>
-        <% end %>
+        <%= render @services %>
       </ul>
     </section>
   </aside>

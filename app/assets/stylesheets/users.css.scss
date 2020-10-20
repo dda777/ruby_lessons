@@ -1,0 +1,23 @@
+.forgot_pass_table {
+  display: flex;
+  #password_reset_email{
+    margin-right: 10px;
+    width: calc(100% - 100px);
+  }
+  input{
+    margin: 5px 0;
+  }
+  label {
+    width: 300px;
+    padding: 12px 0 0 0;
+  }
+}
+
+.edit_user {
+  input{
+    margin-top: 10px;
+  }
+  label{
+    margin-top: 10px;
+  }
+}

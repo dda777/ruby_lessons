@@ -1,0 +1,53 @@
+ru:
+  users:
+    reset_pass:
+      title: 'Сброс пароля'
+      password: 'Пароль'
+      confirmation: 'Подтверждение пароля'
+      save_password_btn: 'Сохранить пароль'
+      send_on_email_btn: 'Восстановить'
+      email: 'Введите Ваш Email: '
+      forgot_password_title: 'Восстановить пароль'
+    login:
+      email: 'Email'
+      password: 'Пароль'
+      forgot_password: '(восстановить)'
+      remember_me: 'Запомнить меня?'
+      log_in: 'Войти'
+      log_in_facebook: 'Войти с помощью Facebook'
+      log_in_goole: 'Войти с помощью Google'
+      new_user: 'Новый пользователь?'
+      sign_up_now: 'Зарегистрироваться'
+    mail:
+      account_activation:
+        title: 'Sample App'
+        hi: 'Привет'
+        welcome: 'Вы выполнили регистрацию в приложении Sample App. Нажмите на ссылку чтобы активировать ваш аккаунт:'
+        activate: 'Активировать'
+      password_reset:
+        title: 'Восстановление пароля'
+        to_reset: 'Для восстановления пароля перейдите по ссылке:'
+        expire: 'Срок жизни ссылки 2 часа.'
+        dont_restore: 'Если вы не создавали запрос на восстановление пароля, не обращайте внимания на это письмо.'
+    sign_up:
+      form:
+        name: 'Имя'
+        email: 'Email'
+        password: 'Пароль'
+        pass_confirmation: 'Подтверждение пароля'
+      sign_up: 'Регистрация'
+      create_account: 'Создать аккаунт'
+      sign_up_facebook: 'Войти с помощью Facebook'
+      sign_up_goole: 'Войти с помощью Google'
+    users_list:
+      all_users: 'Все пользователи'
+      delete: 'Удалить'
+      confirm: 'Вы уверены что хотите удалить пользователя?'
+    update:
+      title: 'Изменить учетные данные'
+      save: 'Сохранить изменения'
+      change: 'изменить'
+    show:
+      service:
+        title: 'Сервисы авторизации: '
+

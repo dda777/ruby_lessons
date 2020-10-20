@@ -7,12 +7,12 @@
 
     <div class='pull-right project-options'>
       <span class='edit-project'>
-        <%= link_to '#', id: "edit-project-name-#{project.id}", class: 'edit-project-name' do %>
+        <%= link_to '#', id: "edit-project-name-#{project.id}", class: 'edit-project-name', title: t('common.edit') do %>
           <%= icon_label 'icon-pencil' %>
         <% end %>
       </span>
       <span class='destroy-project'>
-        <%= link_to project, remote: true, method: 'delete', class: 'destroy-project', title: 'Удалить', data: { confirm: t('common.are_you_sure?') } do %>
+        <%= link_to project, remote: true, method: 'delete', class: 'destroy-project', title: t('common.delete'), data: { confirm: t('common.are_you_sure?') } do %>
           <%= icon_label 'icon-trash' %>
         <% end %>
       </span>
@@ -33,7 +33,7 @@
       <section class='todo'>
         <%= simple_form_for Task.new, method: 'put', remote: true, html: { class: 'bulk-destroy-tasks' } do |form| %>
           <ul class="todo-controls">
-            <li> <%= link_to nil, class: 'delete-selected-tasks', title: 'Delete selected tasks' do %> <%= icon_label 'icon-trash' %> <% end %> </li>
+            <li> <%= link_to nil, class: 'delete-selected-tasks', title: t('tasks.delete') do %> <%= icon_label 'icon-trash' %> <% end %> </li>
           </ul>
 
           <ul class='todo-list'>

@@ -4,13 +4,13 @@
   </div>
   <div class='center'>
     <%= link_to nil, id: 'new-project-toggler', class: 'btn btn-danger' do %>
-      <%= icon_label 'icon-plus', t('authenticated.projects.index.new') %>
+      <%= icon_label 'icon-plus', t('projects.add_new') %>
     <% end %>
   </div>
 
   <div id='new-project' class='well span6'>
     <%= form_with model: @project, html: { id: 'new-project', class: 'form-horizontal' } do |form| %>
-      <%= form.label :title, "Title" %>
+      <%= form.label :title, t('projects.name') %>
       <%= form.text_field :title%>
 
       <%= form.submit t('common.submit'), class: 'btn btn-success', disabled: true, data: { disable_with: t('common.please_wait') } %>
@@ -18,14 +18,12 @@
   </div>
 <% else %>
 <div class="center jumbotron">
-  <h1>Welcome to the Sample App</h1>
+  <h1><%= t('home.welcome') %></h1>
   <h2>
-    This is the home page for the
-    <a href="http://www.railstutorial.org/">Ruby on Rails Tutorial</a>
-    sample application.
+    <%= t('home.text') %>
   </h2>
-  <%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-primary" %>
+  <%= link_to t('home.sign_up'), signup_path, class: "btn btn-lg btn-primary" %>
 </div>
-<%= link_to image_tag("rails.png", alt: "Rails logo"),
+<%= link_to image_tag("rails.png", alt: t('home.logo_title')),
             'http://rubyonrails.org/' %>
 <% end %>

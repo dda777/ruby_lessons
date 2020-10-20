@@ -1,15 +1,15 @@
-<% provide(:title, 'Sign up') %>
-<h1>Sign up</h1>
+<% provide(:title, t('users.sign_up.sign_up')) %>
+<h1><%= t('users.sign_up.sign_up') %></h1>
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
     <%= form_with(url: @user, scope: :user, local: true, class: 'login-form') do |f| %>
       <%= render 'form', f:f %>
-      <%= f.submit "Create my account", class: "btn btn-primary" %>
+      <%= f.submit  t('users.sign_up.create_account'), class: "btn btn-primary" %>
     <% end %>
 
     <div class="oauth">
-      <%= link_to "Sign up with Facebook", '/auth/facebook/', class: 'btn btn-primary', role: "button"%>
-      <%= link_to "Sign up with Google", '/auth/google_oauth2/', class: 'btn btn-danger', role: "button"%>
+      <%= link_to t('users.sign_up.sign_up_facebook'), '/auth/facebook/', class: 'btn btn-primary', role: "button"%>
+      <%= link_to t('users.sign_up.sign_up_goole'), '/auth/google_oauth2/', class: 'btn btn-danger', role: "button"%>
     </div>
   </div>
 </div>

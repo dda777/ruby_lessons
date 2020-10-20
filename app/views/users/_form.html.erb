@@ -1,9 +1,9 @@
 <%= render 'shared/error_messages', object: @user %>
-<%= f.label :name %>
+<%= f.label :name, t('users.sign_up.form.name') %>
 <%= f.text_field :name, class: 'form-control' %>
-<%= f.label :email %>
+<%= f.label :email, t('users.sign_up.form.email') %>
 <%= f.email_field :email, class: 'form-control' %>
-<%= f.label :password %>
+<%= f.label :password, t('users.sign_up.form.password') %>
 <%= f.password_field :password, class: 'form-control' %>
-<%= f.label :password_confirmation, "Confirmation" %>
+<%= f.label :password_confirmation, t('users.sign_up.form.pass_confirmation') %>
 <%= f.password_field :password_confirmation, class: 'form-control' %>

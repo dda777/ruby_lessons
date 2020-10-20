@@ -36,7 +36,7 @@ $.api =
           position = $(event.target).find('li').reverse().index(ui.item[0]) + 1
 
           $.ajax
-            url: "/tasks/#{taskId}",
+            url: "/en/tasks/#{taskId}",
             method: "PUT",
             data: { task: { position: position } }
       )

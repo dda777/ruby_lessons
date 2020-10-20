@@ -46,6 +46,7 @@
 @import 'classes';
 @import 'projects';
 @import 'tasks';
+@import "users";
 @import 'bootstrap/glyphicons';
 
 #header {
@@ -104,6 +105,25 @@ div#notifications {
     background: rgba(0, 0, 0, 0.6);
     color: white;
     text-shadow: none;
+  }
+}
+ul.justify-content-end {
+  justify-content: flex-end!important;
+}
+div.language{
+  display: flex;
+  padding-left: 10px;
+  li{
+    padding: 15px 0;
+    a{
+      color: #8b8f97;
+      padding: 15px 5px;
+    }
+  }
+  li.divider{
+    padding: 14px 0;
+    color: #fff;
+
   }
 }
 

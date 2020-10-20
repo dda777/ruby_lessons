@@ -1,0 +1,18 @@
+ru:
+  common:
+    please_wait: 'Пожалуйста подождите'
+    are_you_sure?: 'Вы уверены что хотите удалить?'
+    submit: 'Добавить'
+    edit: 'Редактировать'
+    delete: 'Удалить'
+    x:      '×'
+  menu:
+    home: 'Главная'
+    help: 'Помощь'
+    users: 'Пользователи'
+    account: 'Аккаунт'
+    profile: 'Профиль'
+    settings: 'Настройки'
+    log_out: 'Выйти'
+    log_in: 'Войти'
+    text_logo: 'sample app'

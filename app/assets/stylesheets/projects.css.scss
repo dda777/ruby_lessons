@@ -4,6 +4,7 @@
 
 
 body#static-pages {
+
   .editable-click {
     border-bottom: none; /* Overrides unwanted x-editable styles */
   }
@@ -15,14 +16,28 @@ body#static-pages {
 
 
   div#new-project {
-    float: none;
+    display: flex;
     margin: 25px auto;
-    padding: 40px 30px;
-    width: 500px;
+    width: 650px;
     form{
+      width: 100%;
+      display: flex;
+      margin: 40px 10px;
       input#project_title{
-        margin: 10px;
-        width: 300px;
+        border: 1px solid #dadada;
+        height: 40px;
+        padding: 10px;
+        vertical-align: top;
+        width: calc(100% - 100px);
+        margin-right: 10px;
+      }
+      label {
+        display: flex !important;
+        padding: 10px 10px 0 0;
+        width: 250px !important;
+      }
+      input{
+        height: 40px;
       }
     }
   }
@@ -49,6 +64,8 @@ body#static-pages {
       }
 
       div.project-options {
+        margin-top: 4px;
+        margin-right: 10px;
         span.destroy-project {
           border-left: 1px solid cadetBlue;
           padding-left: 10px;

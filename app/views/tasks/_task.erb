@@ -6,10 +6,10 @@
   </span>
 
   <div class='pull-right task-options'>
-    <%= link_to complete_task_path(task), remote: true, method: 'put', class: 'complete-task', title: task.completed?? 'Mark as uncompleted' : 'Mark as completed' do %>
+    <%= link_to complete_task_path(task), remote: true, method: 'put', class: 'complete-task', title: task.completed?? t('tasks.mark.not_completed') : t('tasks.mark.completed') do %>
       <%= icon_label task.completed?? 'icon-thumbs-down' : 'icon-thumbs-up' %>
     <% end %>
-    <%= link_to '#', id: "edit-task-name-#{task.id}", class: 'edit-task-name', title: 'edit' do %>
+    <%= link_to '#', id: "edit-task-name-#{task.id}", class: 'edit-task-name', title: t('tasks.edit') do %>
       <%= icon_label 'icon-pencil' %>
     <% end %>
     <%= icon_label 'icon-resize-vertical task-drag-handle' %>

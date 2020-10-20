@@ -1,0 +1,18 @@
+en:
+  common:
+    please_wait: 'Please Wait ..'
+    are_you_sure?: 'Are you sure?'
+    submit: 'Submit'
+    edit: 'Edit'
+    delete: 'Delete'
+    x:      '×'
+  menu:
+    home: 'Home'
+    help: 'Help'
+    users: 'Users'
+    account: 'Account'
+    profile: 'Profile'
+    settings: 'Settings'
+    log_out: 'Log out'
+    log_in: 'Log in'
+    text_logo: 'sample app'

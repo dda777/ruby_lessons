@@ -1,29 +1,46 @@
 <header class="navbar navbar-fixed-top navbar-inverse">
   <div class="container">
-    <%= link_to "sample app", root_path, id: "logo" %>
-    <nav>
+    <%= link_to t('menu.text_logo'), root_path, id: "logo" %>
+    <nav class="navbar-expand-lg">
       <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to "Home", root_path %></li>
-        <li><%= link_to "Help", help_path %></li>
+        <li><%= link_to t('menu.home'), root_path %></li>
         <% if logged_in? %>
-          <li><%= link_to "Users", users_path %></li>
+          <li><%= link_to t('menu.users'), users_path %></li>
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              Account <b class="caret"></b>
+              <%= t('menu.account') %> <b class="caret"></b>
             </a>
             <ul class="dropdown-menu">
-              <li><%= link_to "Profile", current_user %></li>
-              <li><%= link_to "Settings", edit_user_path(current_user) %></li>
+              <li><%= link_to t('menu.profile'), current_user %></li>
+              <li><%= link_to t('menu.settings'), edit_user_path(current_user) %></li>
               <li class="divider"></li>
               <li>
-                <%= link_to "Log out", logout_path, method: "delete" %>
+                <%= link_to t('menu.log_out'), logout_path, method: "delete" %>
               </li>
             </ul>
           </li>
         <% else %>
-          <li><%= link_to "Log in", login_path %></li>
+          <li><%= link_to t('menu.log_in'), login_path %></li>
         <% end %>
+        <div class="language">
+          <li><%= link_to "Ru", { :locale=>'ru' }, class: 'nav-link disabled' %></li>
+          <li class="divider">|</li>
+          <li><%= link_to "En", { :locale=>'en' } %></li>
+        </div>
+
       </ul>
+      <ul class="nav navbar-nav navbar-right">
+
+      </ul>
+      <%# if I18n.locale == I18n.default_locale %>
+<!--        <span class="navbar-text"></span>-->
+<!--        <span class="navbar-text"></span>-->
+      <%# else %>
+        <%#= link_to "Ru", { :locale=>'ru' } %>
+        <%#= link_to "En", { :locale=>'en' }, class: 'nav-link disabled' %>
+      <%#end%>
     </nav>
+
+
   </div>
 </header>

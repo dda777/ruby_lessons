@@ -1,0 +1,8 @@
+en:
+  home:
+    welcome: 'Welcome to the Sample App'
+    text: 'This is the home page for the Ruby on Rails Tutorial sample application.'
+    sign_up: 'Sign Up'
+    logo_title: 'Rails logo'
+
+

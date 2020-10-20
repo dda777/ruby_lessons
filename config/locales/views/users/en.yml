@@ -1,0 +1,54 @@
+en:
+  users:
+    reset_pass:
+      title: 'Reset password'
+      password: 'Password'
+      confirmation: 'Password confirmation'
+      save_password_btn: 'Save password'
+      send_on_email_btn: 'Send'
+      email: 'Enter your Email: '
+      forgot_password_title: 'Restore password'
+    login:
+      email: 'Email'
+      password: 'Password'
+      forgot_password: '(forgot password)'
+      remember_me: 'Remember me on this computer'
+      log_in: 'Log in'
+      log_in_facebook: 'Log in with Facebook'
+      log_in_goole: 'Log in with Google'
+      new_user: 'New user?'
+      sign_up_now: 'Sign up now!'
+    mail:
+      account_activation:
+        title: 'Sample App'
+        hi: 'Hi'
+        welcome: 'Welcome to the Sample App! Click on the link below to activate your account:'
+        activate: 'Activate'
+      password_reset:
+        title: 'Password reset'
+        to_reset: 'To reset your password click the link below:'
+        expire: 'This link will expire in two hours.'
+        dont_restore: 'If you did not request your password to be reset, please ignore this email and your password will stay as it is.'
+    sign_up:
+      form:
+        name: 'Name'
+        email: 'Email'
+        password: 'Password'
+        pass_confirmation: 'Confirmation'
+      sign_up: 'Sign up'
+      create_account: 'Create my account'
+      sign_up_facebook: 'Sign up with Facebook'
+      sign_up_goole: 'Sign up with Google'
+    users_list:
+      all_users: 'All users'
+      delete: 'Delete'
+      confirm: 'You sure?'
+    update:
+      title: 'Update your profile'
+      save: 'Save changes'
+      change: 'change'
+    show:
+      service:
+        title: 'Services OAuth: '
+
+

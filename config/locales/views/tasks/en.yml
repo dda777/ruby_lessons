@@ -1,0 +1,8 @@
+en:
+  tasks:
+    delete: 'Delete selected tasks'
+    edit: 'Edit task'
+    mark:
+      completed: "Mark as completed"
+      not_completed: "Mark as uncompleted"
+
