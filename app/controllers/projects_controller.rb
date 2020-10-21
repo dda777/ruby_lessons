@@ -17,7 +17,7 @@ class ProjectsController < ApplicationController
     if @project.update(project_params)
       render json: @project
     else
-      render text: @project.errors.full_messages.join("<br />")
+      render json: @project.errors, status: :unprocessable_entity
     end
   end
 

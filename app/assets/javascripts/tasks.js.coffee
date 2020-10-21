@@ -1,4 +1,4 @@
-# Place all the behaviors and hooks related to the matching controller here.
+# Place all the behaviors and hooks related to the matching controllers here.
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
@@ -18,10 +18,8 @@ $.api.tasks =
             editTask: (event) ->
                 event.stopPropagation()
                 event.preventDefault()
-
                 taskId = @id.replace('edit-task-name-', '')
-                $("span#task-#{taskId}").editable('toggle', { url: '/tasks'})
-
+                $("span#task-#{taskId}").editable('toggle', {url: '/tasks'})
             completeTask: ->
                 task = $(this).parents('li.task-item')
 
@@ -55,7 +53,7 @@ $.api.tasks =
             event.preventDefault()
             return false if $(this).parents('form').find('input[type="checkbox"]:checked').length == 0
 
-            $(this).parents('form').submit() if confirm('Are you sure?')
+            $(this).parents('form').submit() if confirm(I18n.t('common.are_you_sure?'))
 
         container.on 'ajax:complete', 'form.bulk-destroy-tasks', ->
             for input in $(this).find('input[type="checkbox"]:checked')

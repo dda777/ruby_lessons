@@ -154,7 +154,9 @@ aside {
 /* Формы */
 
 .col {
-  width: 500px;
+  max-width: 500px;
+  min-width: 300px;
+  width: 100%;
   margin-right: 10px;
 }
 .checkbox {
@@ -250,5 +252,12 @@ aside {
     margin-right: 20px;
   }
 }
-
-
+.help-block {
+  display: block;
+  margin: 6px 0px 0 0;
+  color: #c33636;
+  font-size: medium;
+  font-style: revert;
+  width: 100%;
+  max-width: 175px;
+}

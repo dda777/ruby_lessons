@@ -2,3 +2,4 @@ en:
   projects:
     add_new: "Add TODO List"
     name: "Title name"
+    are_you_sure: 'Are you sure you want to delete the project?'

@@ -11,7 +11,7 @@ class ApplicationController < ActionController::Base
   def logged_in_user
     unless logged_in?
       store_location
-      flash[:danger] = 'Please log in.'
+      flash[:danger] = t('common.please_login')
       redirect_to login_url
     end
   end
@@ -19,13 +19,4 @@ class ApplicationController < ActionController::Base
   def default_url_options
     { locale: I18n.locale }
   end
-
-
-
-  # def browser_locale(request)
-  #   locales = request.env['HTTP_ACCEPT_LANGUAGE'] || ""
-  #   locales.scan(/[a-z]{2}(?=;)/).find do |locale|
-  #     I18n.available_locales.include?(locale.to_sym)
-  #   end
-  # end
 end

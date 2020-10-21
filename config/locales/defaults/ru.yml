@@ -1,5 +1,7 @@
 ru:
   common:
+    please_login: 'Пожалуйста выполните вход.'
+    form_contain: 'Форма содержит ошибки.'
     please_wait: 'Пожалуйста подождите'
     are_you_sure?: 'Вы уверены что хотите удалить?'
     submit: 'Добавить'
@@ -16,3 +18,14 @@ ru:
     log_out: 'Выйти'
     log_in: 'Войти'
     text_logo: 'sample app'
+  activerecord:
+    attributes:
+      user:
+        email: "Email"
+        name: "Имя"
+        password: 'Пароль'
+        password_confirmation: 'Подтверждение пароля'
+      tasks:
+        name: 'Имя задачи'
+      project:
+        title: 'Название проекта'

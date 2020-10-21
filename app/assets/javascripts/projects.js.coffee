@@ -1,4 +1,4 @@
-# Place all the behaviors and hooks related to the matching controller here.
+# Place all the behaviors and hooks related to the matching controllers here.
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://coffeescript.org/
 #
@@ -17,7 +17,7 @@ $.api.staticPages =
 
     liveElements =
       destroyProject: 'a.destroy-project'
-      editProject: 'a.edit-project-name'
+      editProject: 'a.edit-project-title'
 
 
     callbacks =
@@ -50,21 +50,16 @@ $.api.staticPages =
         event.stopPropagation()
         event.preventDefault()
 
-        projectId = @id.replace('edit-project-name-', '')
+        projectId = @id.replace('edit-project-title-', '')
         $("span#project-#{projectId}").editable('toggle')
 
 
     # Bindings
     elements.newProjectToggler.bind 'click', callbacks.toggleNewProjectContainer
-    elements.newProjectForm.
-    bind('ajax:complete',   callbacks.createProject).
-    bind('ajax:beforeSend', callbacks.resetProjectForm)
+    elements.newProjectForm.bind('ajax:complete', callbacks.createProject).bind('ajax:beforeSend', callbacks.resetProjectForm)
 
     # Validations
-    elements.newProjectForm.
-    find('input#project_title').bind 'keyup', $.api.utils.toggleSubmit
-
-    # Live bindings
+    elements.newProjectForm.find('input#project_title').bind 'keyup', $.api.utils.toggleSubmit
 
     # Destroy
     elements.projectsContainer.on 'ajax:beforeSend', liveElements.destroyProject, -> $(this).addClass('disabled')
@@ -72,4 +67,6 @@ $.api.staticPages =
 
     # Edit
     elements.projectsContainer.on 'click', liveElements.editProject, liveCallbacks.editProject
+
+
 

@@ -11,6 +11,9 @@
 //= require projects
 //= require tasks
 //= require_self
+//= require i18n
+//= require i18n.js
+//= require i18n/translations
 
 
 
@@ -25,7 +28,7 @@ $(window).bind('load', function(event) {
     var controllerPath = $.camelCase($.api.controller);
     var controllerJs   = $.api[ controllerPath ];
 
-
+    I18n.locale = $('body').data('locale')
     if ( typeof controllerJs === 'object' ) controllerJs.init();
 
     $.api.loading = false;
@@ -34,5 +37,11 @@ $(window).bind('load', function(event) {
         event.preventDefault();
         event.stopPropagation();
     });
+    $.fn.editable.defaults.error =
+        function(response, newValue) {
+            var field_name = $(this).data('name'),
+                error_msgs = response.responseJSON[field_name];
+            return error_msgs.join("; ");
+        };
 
 });

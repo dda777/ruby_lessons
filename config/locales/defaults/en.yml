@@ -1,5 +1,7 @@
 en:
   common:
+    please_login: 'Please log in.'
+    form_contain: 'The form contains errors.'
     please_wait: 'Please Wait ..'
     are_you_sure?: 'Are you sure?'
     submit: 'Submit'
@@ -16,3 +18,14 @@ en:
     log_out: 'Log out'
     log_in: 'Log in'
     text_logo: 'sample app'
+  activerecord:
+    attributes:
+      user:
+        email: "Email"
+        name: "Name"
+        password: 'Password'
+        password_confirmation: 'Password confirmation'
+      tasks:
+        name: 'Имя задачи'
+      project:
+        title: 'Название проекта'

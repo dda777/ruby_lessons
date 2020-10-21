@@ -1,4 +1,4 @@
-// Place all the styles related to the Projects controller here.
+// Place all the styles related to the Projects controllers here.
 // They will automatically be included in application.css.scss.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
@@ -18,27 +18,32 @@ body#static-pages {
   div#new-project {
     display: flex;
     margin: 25px auto;
-    width: 650px;
+    width: 700px;
     form{
       width: 100%;
+
       display: flex;
       margin: 40px 10px;
-      input#project_title{
+      input.new_project_btn{
+        width: 100px !important;
+        height: 40px;
+      }
+      input.new_project_title{
         border: 1px solid #dadada;
         height: 40px;
         padding: 10px;
         vertical-align: top;
-        width: calc(100% - 100px);
+        max-width: 220px;
+        width: 100%;
         margin-right: 10px;
       }
+
       label {
         display: flex !important;
-        padding: 10px 10px 0 0;
-        width: 250px !important;
+        padding-top: 10px;
+        width: 150px !important;
       }
-      input{
-        height: 40px;
-      }
+
     }
   }
 
@@ -57,7 +62,7 @@ body#static-pages {
         font-size: 22px;
       }
 
-      span.project-name {
+      span.project-title {
         color: white;
         font-size: 22px;
         margin-left: 10px;

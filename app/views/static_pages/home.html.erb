@@ -11,9 +11,9 @@
   <div id='new-project' class='well span6'>
     <%= form_with model: @project, html: { id: 'new-project', class: 'form-horizontal' } do |form| %>
       <%= form.label :title, t('projects.name') %>
-      <%= form.text_field :title%>
+      <%= form.text_field :title, class: 'new_project_title'%>
 
-      <%= form.submit t('common.submit'), class: 'btn btn-success', disabled: true, data: { disable_with: t('common.please_wait') } %>
+      <%= form.submit t('common.submit'), class: 'btn btn-success new_project_btn', disabled: true, data: { disable_with: t('common.please_wait') }, id: 'project_title'%>
     <% end %>
   </div>
 <% else %>

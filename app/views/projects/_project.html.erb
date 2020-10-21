@@ -1,18 +1,18 @@
 <div class='project' id='project-<%= project.id %>'>
   <div class='project-header'>
     <span class='calendar'> <%= icon_label 'icon-calendar' %> </span>
-    <span class='project-name' id='project-<%= project.id %>' data-original-title="Title" data-model="project" data-resource='project' data-name='title' data-url='<%= project_path(project) %>'>
+    <span class='project-title' id='project-<%= project.id %>' data-original-title="<%= t('projects.name') %>" data-model="project" data-resource='project' data-name='title' data-url='<%= project_path(project) %>'>
       <%= project.title %>
     </span>
 
     <div class='pull-right project-options'>
       <span class='edit-project'>
-        <%= link_to '#', id: "edit-project-name-#{project.id}", class: 'edit-project-name', title: t('common.edit') do %>
+        <%= link_to '#', id: "edit-project-title-#{project.id}", class: 'edit-project-title', title: t('common.edit') do %>
           <%= icon_label 'icon-pencil' %>
         <% end %>
       </span>
       <span class='destroy-project'>
-        <%= link_to project, remote: true, method: 'delete', class: 'destroy-project', title: t('common.delete'), data: { confirm: t('common.are_you_sure?') } do %>
+        <%= link_to project, remote: true, method: 'delete', class: 'destroy-project', title: t('common.delete'), data: { confirm: t('projects.are_you_sure') } do %>
           <%= icon_label 'icon-trash' %>
         <% end %>
       </span>
@@ -31,7 +31,7 @@
 
     <div class='project-tasks'>
       <section class='todo'>
-        <%= simple_form_for Task.new, method: 'put', remote: true, html: { class: 'bulk-destroy-tasks' } do |form| %>
+        <%= form_with model: Task.new, method: 'put', remote: true, html: { class: 'bulk-destroy-tasks' } do |form| %>
           <ul class="todo-controls">
             <li> <%= link_to nil, class: 'delete-selected-tasks', title: t('tasks.delete') do %> <%= icon_label 'icon-trash' %> <% end %> </li>
           </ul>

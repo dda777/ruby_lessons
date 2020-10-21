@@ -15,6 +15,7 @@ gem 'bootstrap-will_paginate'
 gem 'bootstrap-sass'
 gem 'bootstrap-glyphicons'
 gem 'rails-i18n'
+gem "i18n-js"
 gem 'puma', '~> 4.1'
 gem 'font-awesome-sass-rails'
 gem 'sass-rails', '>= 6'
@@ -31,7 +32,6 @@ gem 'jbuilder', '~> 2.7'
 gem 'bootsnap', '>= 1.4.2', require: false
 gem 'acts_as_list'
 gem 'x-editable-rails'
-gem 'simple_form'
 
 
 group :assets do

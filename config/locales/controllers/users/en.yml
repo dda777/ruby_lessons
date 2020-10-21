@@ -1,0 +1,37 @@
+en:
+  users:
+    create:
+      info: 'Please check your email to activate your account'
+    update:
+      success: 'Profile updated'
+    destroy:
+      success: 'User deleted'
+  sessions:
+    create:
+      warning: 'Account not activated. Check your email for the activation link.'
+      danger: 'Invalid email/password combination'
+  services:
+    create:
+      sign_in:
+        success_log_in: 'Logged in with %{provider}.'
+        success_with_link_to_email: 'Logged in with %{provider} and linked to mail account %{email}. Welcome!'
+        error_used_on_site: '%{provider} cannot be used to register for the Sample App because a valid email address was not provided. Use a different authentication provider or use local registration.'
+        info_add_to_account: 'A login with %{provider} has been added to your account.'
+        info_allready_add: '%{provider} account is already linked to your account.'
+        error_invalid_data: '%{service_route} returned invalid data for user id.'
+        error_auth: 'Error while authenticating with %{service_route}.'
+      sign_up:
+        success_create: 'Your Sample App account was created using %{provider}. In your profile, you can change your personal information and add a local password.'
+    destroy:
+      success: 'Account unlinked'
+  activations:
+    success: 'Account activated!'
+    error: 'Invalid activation link'
+  password_resets:
+    create:
+      info: 'Email sent with password reset instructions'
+      danger: 'Email address not found'
+    update:
+      success: 'Password has been reset'
+      error: 'can`t be empty'
+    pass_date_expired: 'Password reset has expired'

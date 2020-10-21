@@ -21,7 +21,7 @@ class ServicesController < ApplicationController
         if !user_signed_in?
           auth = Service.find_by_provider_and_uid(provider, uid)
           if auth
-            flash[:success] = 'Signed in successfully via ' + provider.capitalize + '.'
+            flash[:success] = t('services.create.sign_in.success_log_in', provider: provider.capitalize)
             user = User.find_by_email(auth.uemail)
             log_in(user)
             redirect_to root_url
@@ -29,9 +29,9 @@ class ServicesController < ApplicationController
             if email != ''
               existinguser = User.find_by_email(email)
               if existinguser
-                puts uid, name, email
                 existinguser.services.create(provider: provider, uid: uid, uname: name, uemail: email)
-                flash[:success] = 'Sign in via ' + provider.capitalize + ' has been added to your account ' + existinguser.email + '. Signed in successfully!'
+                existinguser.activated = true
+                flash[:success] = t('services.create.sign_in.success_with_link_to_email', provider: provider.capitalize, email: existinguser.email)
                 existinguser.save
                 log_in(existinguser)
                 redirect_to root_url
@@ -40,12 +40,12 @@ class ServicesController < ApplicationController
                 user = User.new(email: email, password: password, password_confirmation: password,name: name, activated: true, activated_at: Time.zone.now)
                 user.services.build(provider: provider, uid: uid, uname: name, uemail: email)
                 user.save
-                flash[:success] = 'Your account on CommunityGuides has been created via ' + provider.capitalize + '. In your profile you can change your personal information and add a local password.'
+                flash[:success] = t('services.create.sign_up.success_create', provider: provider.capitalize)
                 log_in(user)
                 redirect_to root_url
               end
             else
-              flash[:error] = service_route.capitalize + ' can not be used to sign-up on CommunityGuides as no valid email address has been provided. Please use another authentication provider or use local sign-up. If you already have an account, please sign-in and add ' + service_route.capitalize + ' from your profile.'
+              flash[:error] = t('services.create.sign_in.error_used_on_site', provider: provider.capitalize)
               redirect_to new_user_url
             end
           end
@@ -53,26 +53,26 @@ class ServicesController < ApplicationController
           auth = Service.find_by_provider_and_uid(provider, uid)
           if !auth
             current_user.services.create(provider: provider, uid: uid, uname: name, uemail: email)
-            flash[:info] = 'Sign in via ' + provider.capitalize + ' has been added to your account.'
+            flash[:info] = t('services.create.sign_in.info_add_to_account', provider: provider.capitalize)
             redirect_to root_url
           else
-            flash[:info] = service_route.capitalize + ' is already linked to your account.'
+            flash[:info] = t('services.create.sign_in.info_allready_add', provider: provider.capitalize)
             redirect_to root_url
           end
         end
       else
-        flash[:error] = service_route.capitalize + ' returned invalid data for the user id.'
+        flash[:error] = t('services.create.sign_in.error_invalid_data', service_route: service_route.capitalize)
         redirect_to root_url
       end
     else
-      flash[:error] = 'Error while authenticating via ' + service_route.capitalize + '.'
+      flash[:error] = t('services.create.sign_in.error_auth', service_route: service_route.capitalize)
       redirect_to root_url
     end
   end
 
   def destroy
     Service.find(params[:id]).destroy
-    flash[:success] = 'User deleted'
+    flash[:success] = t('services.destroy.success')
     redirect_to users_url
   end
 

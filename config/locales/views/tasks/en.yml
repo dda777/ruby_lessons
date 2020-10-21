@@ -2,6 +2,7 @@ en:
   tasks:
     delete: 'Delete selected tasks'
     edit: 'Edit task'
+    name: 'Task name'
     mark:
       completed: "Mark as completed"
       not_completed: "Mark as uncompleted"

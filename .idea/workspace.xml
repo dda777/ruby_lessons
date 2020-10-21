@@ -20,14 +20,54 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="edaa2b66-13c6-4e70-ac9d-5dc01c2e161d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/views/tasks/update.js.erb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/locales/controllers/users/en.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/locales/controllers/users/ru.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.rakeTasks" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.rakeTasks" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/rubu_lessons.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/rubu_lessons.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/application.css.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/application.css.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gemfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/javascripts/api.js.coffee" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/javascripts/api.js.coffee" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/javascripts/application.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/javascripts/application.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/javascripts/projects.js.coffee" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/javascripts/projects.js.coffee" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/javascripts/tasks.js.coffee" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/javascripts/tasks.js.coffee" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/javascripts/welcome.js.coffee" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/javascripts/welcome.js.coffee" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/custom.css.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/custom.css.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/projects.css.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/projects.css.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/services.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/services.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/tasks.css.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/tasks.css.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/account_activations_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/account_activations_controller.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/application_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/application_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/password_resets_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/password_resets_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/projects_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/projects_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/services_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/services_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/sessions_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/sessions_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/tasks_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/tasks_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/users_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/users_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/helpers/application_helper.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/helpers/application_helper.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/projects/_project.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/projects/_project.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/services/_service.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/services/_service.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/shared/_error_messages.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/shared/_error_messages.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/shared/_user_info.html.erb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/static_pages/home.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/static_pages/home.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/tasks/_task.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/tasks/_task.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/users/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/users/index.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/application.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/application.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/initializers/simple_form.rb" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/config/locales/defaults/en.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config/locales/defaults/en.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/locales/defaults/ru.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config/locales/defaults/ru.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/locales/views/projects/en.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config/locales/views/projects/en.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/locales/views/projects/ru.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config/locales/views/projects/ru.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/locales/views/services/en.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config/locales/views/services/en.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/locales/views/services/ru.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config/locales/views/services/ru.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/locales/views/tasks/en.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config/locales/views/tasks/en.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/locales/views/tasks/ru.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config/locales/views/tasks/ru.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,16 +119,16 @@
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Projects\rubu_lessons\config\locales\views" />
+      <recent name="D:\WWW\Projects\rubu_lessons\app\assets\stylesheets" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Projects\rubu_lessons\config\locales\views\static_pages" />
       <recent name="D:\Projects\rubu_lessons\config\locales\views\services" />
       <recent name="D:\Projects\rubu_lessons\config\locales\defaults" />
       <recent name="D:\Projects\rubu_lessons\config\locales\views\tasks" />
       <recent name="D:\Projects\rubu_lessons\app\views\layouts" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\Projects\rubu_lessons\config\locales\views" />
-      <recent name="D:\WWW\Projects\rubu_lessons\app\assets\stylesheets" />
     </key>
   </component>
   <component name="RunManager" selected="Test::Unit/Shoulda/Minitest.test_should_get_home">
@@ -261,7 +301,7 @@
       <workItem from="1603177777139" duration="17229000" />
       <workItem from="1603199939090" duration="1287000" />
       <workItem from="1603202484284" duration="2847000" />
-      <workItem from="1603211631166" duration="1725000" />
+      <workItem from="1603211631166" duration="30790000" />
     </task>
     <servers />
   </component>
@@ -306,34 +346,34 @@
     <state x="592" y="218" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1602523904068" />
     <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040/-1280.0.1280.984@0.0.1920.1040" timestamp="1603199827723" />
     <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1603056715604" />
-    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1603108024004">
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1603234846470">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1602523020392" />
     <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040/-1280.0.1280.984@0.0.1920.1040" timestamp="1603108024004" />
     <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040/-1280.0.1280.984@1920.0.1920.1040" timestamp="1602856808288" />
-    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1603069529832" />
-    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1603108024004">
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1603234846470" />
+    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1603234846470">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1602523020392" />
     <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040/-1280.0.1280.984@0.0.1920.1040" timestamp="1603108024004" />
     <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040/-1280.0.1280.984@1920.0.1920.1040" timestamp="1602856808287" />
-    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1603069529832" />
-    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1603108024004">
+    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1603234846470" />
+    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1603234846470">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1602523020391" />
     <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040/-1280.0.1280.984@0.0.1920.1040" timestamp="1603108024004" />
     <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040/-1280.0.1280.984@1920.0.1920.1040" timestamp="1602856808287" />
-    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1603069529832" />
-    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1603108024004">
+    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1603234846470" />
+    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1603234846470">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1602523020392" />
     <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040/-1280.0.1280.984@0.0.1920.1040" timestamp="1603108024004" />
     <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040/-1280.0.1280.984@1920.0.1920.1040" timestamp="1602856808288" />
-    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1603069529832" />
+    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1603234846470" />
     <state width="1877" height="282" key="GridCell.Tab.1.bottom" timestamp="1603107947591">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -397,13 +437,13 @@
     </state>
     <state x="616" y="240" key="run.anything.popup/0.0.1920.1040/1920.0.1920.1040/-1280.0.1280.984@0.0.1920.1040" timestamp="1603185440194" />
     <state x="616" y="240" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1602437467615" />
-    <state x="623" y="225" width="840" height="680" key="search.everywhere.popup" timestamp="1603127850149">
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1603244007818">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="623" y="225" width="840" height="680" key="search.everywhere.popup/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1602537575165" />
     <state x="498" y="178" width="672" height="538" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1602525916478" />
     <state x="623" y="225" width="840" height="680" key="search.everywhere.popup/0.0.1920.1040/1920.0.1920.1040/-1280.0.1280.984@0.0.1920.1040" timestamp="1603127850149" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1603072265449" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1603244007818" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/rubu_lessons@test_should_get_home.rcov" NAME="test_should_get_home Coverage Results" MODIFIED="1603099679605" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="rubu_lessons" />

@@ -16,8 +16,9 @@ $.api =
           element.after $.api.utils.blockError(error)
 
     toggleSubmit: (event) ->
-      return false if event.which == 13 # do nothing if "return" was pressed
+      return false if event.which == 13
       $(this).parents('form').find('input[type="submit"]').prop('disabled', this.value.trim().length == 0)
+
 
     resetForm: ->
       $this = $(this)
