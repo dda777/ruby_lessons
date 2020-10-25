@@ -3,6 +3,10 @@ en:
     delete: 'Delete selected tasks'
     edit: 'Edit task'
     name: 'Task name'
+    date_start: 'Date start'
+    date_end: 'Date end'
+    start: 'Start:'
+    end: 'End:'
     mark:
       completed: "Mark as completed"
       not_completed: "Mark as uncompleted"

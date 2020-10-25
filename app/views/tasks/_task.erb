@@ -4,8 +4,19 @@
   <span class='task-name' id='task-<%= task.id %>' data-original-title="<%= t('tasks.name') %>" data-model="task" data-resource='task' data-name='name' data-url='<%= task_path(task) %>'>
     <%= task.name %>
   </span>
-
   <div class='pull-right task-options'>
+    <%= link_to '#', class: 'edit-start-time', id: "edit-start-time-#{task.id}", title: 'Дата начала задачи',pk: task.id do %>
+      <%= t('tasks.start') %>
+    <% end %>
+    <span class='edit-start-time' id='edit-start-time-<%= task.id %>' data-original-title="<%= t('tasks.date_start') %>" data-id="<%= task.id %>"  data-date="<%= task.end_time %>" data-model="task" data-resource='task' data-name='start_time' data-url='<%= task_path(task) %>' data-type="date">
+      <%= task.start_time&.strftime('%d.%m.%Y') %>
+    </span> |
+    <%= link_to '#', class: 'edit-end-time', id: "edit-end-time-#{task.id}", title: 'Дата окончания задачи',pk: task.id do %>
+      <%= t('tasks.end') %>
+    <% end %>
+    <span class='edit-end-time' id='edit-end-time-<%= task.id %>' data-original-title="<%= t('tasks.date_end') %>" data-id="<%= task.id %>" data-date="<%= task.end_time %>" data-completed="<%= task.completed %>" data-model="task" data-resource='task' data-name='end_time' data-url='<%= task_path(task) %>' data-type="date">
+      <%= task.end_time&.strftime('%d.%m.%Y') %>
+    </span> |
     <%= link_to complete_task_path(task), remote: true, method: 'put', class: 'complete-task', title: task.completed?? t('tasks.mark.not_completed') : t('tasks.mark.completed') do %>
       <%= icon_label task.completed?? 'icon-thumbs-down' : 'icon-thumbs-up' %>
     <% end %>

@@ -5,7 +5,8 @@
 body#static-pages {
   div.control-group.task_project_id { display: none };
   div.new-task-container {
-    padding: 10px;
+    position: relative;
+    padding: 10px 10px 0 10px;
     i {
       cursor: pointer;
       position: absolute;
@@ -16,8 +17,7 @@ body#static-pages {
     };
 
     form.form-inline {
-      display: flex;
-      margin: 5px 0 5px 55px;
+      display: block;
 
       div.task_name {
         input{
@@ -35,7 +35,6 @@ body#static-pages {
   }
 
   div.task-options {
-    display: none;
 
     i { cursor: pointer; }
     a {
@@ -123,7 +122,7 @@ body#static-pages {
   padding: 7px 15px 7px 50px;
   line-height: 21px;
   font-size: 12px;
-  color: #8b8f97;
+  color: #3c4c6d;
   border-bottom: 1px solid #e6ebed;
 
 }
@@ -221,3 +220,29 @@ input[type=checkbox]:checked + .toggle:after{
   height: 1.5em;
   line-height: 1.2em;
 }
+.form-task {
+  margin-bottom: 10px !important;
+  input#task_name {
+    width: 360px;
+  }
+  input {
+    margin: 0 10px !important;
+  }
+  label {
+    padding: 0 5px;
+  }
+}
+.add-deadline-field {
+  i{
+    position: relative !important;
+    padding-bottom: 2px !important;
+    margin: 0 !important;
+  }
+}
+.deadline-display {
+  display: none;
+}
+.editable-input {
+  line-height: 0.1em;
+}
+

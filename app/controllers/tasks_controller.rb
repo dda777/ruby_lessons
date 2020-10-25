@@ -1,7 +1,7 @@
 class TasksController < ApplicationController
   before_action :find_task!, only: [:update, :prioritize, :complete]
   before_action :find_project!, only: [:create]
-
+  include ActionView::Helpers::DateHelper
   def create
     @task = @project.task.create(task_params)
 
@@ -42,7 +42,7 @@ class TasksController < ApplicationController
   private
 
   def task_params
-    params.require(:task).permit(:name, :position)
+    params.require(:task).permit(:name, :position, :start_time, :end_time)
   end
 
   def find_task!

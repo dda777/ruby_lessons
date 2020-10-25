@@ -9,7 +9,7 @@
   </div>
 
   <div id='new-project' class='well span6'>
-    <%= form_with model: @project, html: { id: 'new-project', class: 'form-horizontal' } do |form| %>
+    <%= form_with(model: @project, id: 'new-project', class: 'form-horizontal')  do |form| %>
       <%= form.label :title, t('projects.name') %>
       <%= form.text_field :title, class: 'new_project_title'%>
 

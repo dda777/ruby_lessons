@@ -13,17 +13,24 @@ $.api.staticPages =
 
       newProjectToggler:   $('a#new-project-toggler')
       newProjectContainer: $('div#new-project')
+      DeadlineContainer: $('div#deadline')
       newProjectForm:      $('form#new-project')
 
     liveElements =
       destroyProject: 'a.destroy-project'
       editProject: 'a.edit-project-title'
+      addDeadline: 'a.add-deadline-field'
 
 
     callbacks =
       toggleNewProjectContainer: (event) ->
         event.preventDefault()
         elements.newProjectContainer.slideToggle('fast')
+
+      toggleDeadlineContainer: (event) ->
+        event.preventDefault()
+        projectId = $(this).attr('data_id')
+        elements.newProjectContainer.slideToggle 'fast'
 
       createProject: (event, xhr, status) ->
         response = $.parseJSON(xhr.responseText)
@@ -46,6 +53,7 @@ $.api.staticPages =
     liveCallbacks =
       destroyProject: ->
         $(this).parents('div.project').remove()
+
       editProject: (event) ->
         event.stopPropagation()
         event.preventDefault()
@@ -53,9 +61,15 @@ $.api.staticPages =
         projectId = @id.replace('edit-project-title-', '')
         $("span#project-#{projectId}").editable('toggle')
 
+      addDeadline: (event) ->
+        event.preventDefault()
+        projectId = @id.replace('add-deadline-field-', '')
+        $("div#deadline-#{projectId}").slideToggle 'fast'
 
     # Bindings
     elements.newProjectToggler.bind 'click', callbacks.toggleNewProjectContainer
+    elements.projectsContainer.on 'click', liveElements.addDeadline, liveCallbacks.addDeadline
+
     elements.newProjectForm.bind('ajax:complete', callbacks.createProject).bind('ajax:beforeSend', callbacks.resetProjectForm)
 
     # Validations

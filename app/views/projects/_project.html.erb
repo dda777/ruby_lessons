@@ -12,7 +12,7 @@
         <% end %>
       </span>
       <span class='destroy-project'>
-        <%= link_to project, remote: true, method: 'delete', class: 'destroy-project', title: t('common.delete'), data: { confirm: t('projects.are_you_sure') } do %>
+        <%= link_to project, remote: true, method: 'delete', class: 'destroy-project', title: t('common.delete'), data: {confirm: t('projects.are_you_sure')} do %>
           <%= icon_label 'icon-trash' %>
         <% end %>
       </span>
@@ -21,23 +21,47 @@
 
   <div class='project-body'>
     <div class='new-task-container'>
-      <%= icon_label 'icon-plus new-task-label' %>
-      <%= form_with model: Task.new, html: { id: "new-project-task-#{project.id}", class: 'new-task form-inline' } do |form| %>
-        <%= form.text_field :name, class: 'col'%>
+      <%= form_with(model: Task.new, id: "new-project-task-#{project.id}", class: 'new-task form-inline') do |form| %>
+        <div class="form-row">
+          <div class="form-group form-task">
+            <%= form.label :name, 'Название:' %>
+            <%= form.text_field :name, class: 'form-control' %>
+          </div>
+          <div class="form-group form-task">
+            <%= link_to '#', id: "add-deadline-field-#{project.id}", class: 'add-deadline-field', title: t('common.edit') do %>
+              <%= icon_label 'icon-calendar' %>
+            <% end %>
+          </div>
+          <div class="form-group form-task">
+            <%= form.submit t('common.submit'), class: 'btn btn-success', disabled: true, data: {disable_with: t('common.please_wait')} %>
+          </div>
+        </div>
         <%= form.hidden_field :project_id, value: project.id %>
-        <%= form.submit t('common.submit'), class: 'btn btn-success', disabled: true, data: { disable_with: t('common.please_wait') } %>
+
+        <div class="form-row deadline-display" id='deadline-<%= project.id %>'>
+          <div class="form-group form-task">
+            <%= form.label :start_time, 'Начало:' %>
+            <%= form.date_field :start_time, class: 'form-control ', value: date_now, min: date_now %>
+          </div>
+          <div class="form-group form-task">
+            <%= form.label :end_time, 'Конец:' %>
+            <%= form.date_field :end_time, class: 'form-control', value: date_now, min: date_now  %>
+          </div>
+        </div>
+
       <% end %>
     </div>
 
     <div class='project-tasks'>
       <section class='todo'>
-        <%= form_with model: Task.new, method: 'put', remote: true, html: { class: 'bulk-destroy-tasks' } do |form| %>
+        <%= form_with model: Task.new, method: 'put', remote: true, html: {class: 'bulk-destroy-tasks'} do |form| %>
           <ul class="todo-controls">
-            <li> <%= link_to nil, class: 'delete-selected-tasks', title: t('tasks.delete') do %> <%= icon_label 'icon-trash' %> <% end %> </li>
+            <li> <%= link_to nil, class: 'delete-selected-tasks', title: t('tasks.delete') do %> <%= icon_label 'icon-trash' %>
+              <% end %> </li>
           </ul>
 
           <ul class='todo-list'>
-            <%= render partial: 'tasks/task', collection: project.task, locals: {form: form } %>
+            <%= render partial: 'tasks/task', collection: project.task, locals: {form: form} %>
           </ul>
         <% end %>
       </section>

@@ -1,4 +1,5 @@
 module ApplicationHelper
+  require 'date'
   # Возвращает полный заголовок на основе заголовка страницы
   def full_title(page_title = '')
     base_title = 'Sample App'
@@ -7,6 +8,18 @@ module ApplicationHelper
     else
       "#{page_title} | #{base_title}"
     end
+  end
+
+  def difference_in_time(end_time)
+    distance_of_time_in_words(Time.now, end_time + 1.days)
+  end
+
+  def date_now
+    Date.today
+  end
+
+  def xeditable? object = nil
+    true # Or something like current_user.xeditable?
   end
 
   def icon_label(classes, text = '')

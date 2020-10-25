@@ -8,4 +8,8 @@ class StaticPagesController < ApplicationController
 
   def privacy
   end
+
+  def datetime
+    @task = Task.new
+  end
 end

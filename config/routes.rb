@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   root 'static_pages#home'
   get '/:locale' => 'static_pages#home'
   scope '/:locale', locale: /#{I18n.available_locales.join("|")}/ do
-
+    get 'datetime' => 'static_pages#datetime'
     get 'help' => 'static_pages#help'
     get 'privacy' => 'static_pages#privacy'
     get 'about' => 'static_pages#about'
