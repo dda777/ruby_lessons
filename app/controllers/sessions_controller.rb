@@ -12,7 +12,6 @@ class SessionsController < ApplicationController
         flash[:warning] = t('sessions.create.warning')
         redirect_to root_url
       end
-
     else
       flash.now[:danger] = t('sessions.create.danger')
       render 'new'

@@ -36,7 +36,7 @@ module SessionsHelper
 
   # Возвращает true, если пользователь авторизован, иначе возвращает false.
   def user_signed_in?
-    !session[:user_id].nil?
+    !current_user.nil?
   end
 
   # Закрывает постоянный сеанс.
