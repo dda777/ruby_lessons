@@ -20,9 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="edaa2b66-13c6-4e70-ac9d-5dc01c2e161d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/rubu_lessons.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/rubu_lessons.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_19_10_2020_6_05_[Default_Changelist]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_19_10_2020_6_05__Default_Changelist_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/environments/production.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/environments/production.rb" afterDir="false" />
     </list>
@@ -259,7 +257,7 @@
       <workItem from="1603312972601" duration="1667000" />
       <workItem from="1603396130230" duration="8356000" />
       <workItem from="1603649503059" duration="22847000" />
-      <workItem from="1603700066383" duration="984000" />
+      <workItem from="1603700066383" duration="1482000" />
     </task>
     <servers />
   </component>
