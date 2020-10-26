@@ -21,6 +21,7 @@
   <component name="ChangeListManager">
     <list default="true" id="edaa2b66-13c6-4e70-ac9d-5dc01c2e161d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/services_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/services_controller.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/sessions_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/sessions_controller.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/helpers/sessions_helper.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/helpers/sessions_helper.rb" afterDir="false" />
     </list>
@@ -256,12 +257,22 @@
       <workItem from="1603268668288" duration="1839000" />
       <workItem from="1603312972601" duration="1667000" />
       <workItem from="1603396130230" duration="8356000" />
-      <workItem from="1603649503059" duration="20045000" />
+      <workItem from="1603649503059" duration="20396000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">

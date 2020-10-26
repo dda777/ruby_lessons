@@ -18,7 +18,7 @@ class ServicesController < ApplicationController
         provider = 'Google' || ''
       end
       if (uid != '') && (provider != '')
-        if !user_signed_in?
+        if !logged_in?
           auth = Service.find_by_provider_and_uid(provider, uid)
           if auth
             flash[:success] = t('services.create.sign_in.success_log_in', provider: provider.capitalize)
