@@ -47,6 +47,7 @@
     <orderEntry type="library" scope="PROVIDED" name="bcrypt (v3.1.16, ruby-2.7.1-p83) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="bindex (v0.8.1, ruby-2.7.1-p83) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="bootsnap (v1.4.8, ruby-2.7.1-p83) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="bootstrap-daterangepicker-rails (v3.0.4, ruby-2.7.1-p83) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="bootstrap-glyphicons (v0.0.1, ruby-2.7.1-p83) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="bootstrap-sass (v3.4.1, ruby-2.7.1-p83) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="bootstrap-will_paginate (v1.0.0, ruby-2.7.1-p83) [gem]" level="application" />
